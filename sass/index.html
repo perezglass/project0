@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Web Page!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="main-nav">
+        <ul class="nav">
+            <li class="name">Otec Perez </li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../1index.html">Contact</a></li>
+            <li><a href="../2index.html">Photos</a></li>
+            <li><a href="#">Schedule</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-4">
+                    <span>0600 &nbsp </span> Wake Up
+                </div>
+                <div class="col-4">
+                    <span>0700 &nbsp </span> Get Ready
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <span>0800 &nbsp </span> BreakFast
+                </div>
+                <div class="col-4">
+                    <span>0900 &nbsp </span> Play Basketball
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-4">
+                    <span>1000 &nbsp </span> Work
+                </div>
+                <div class="col-4">
+                    <span>1500 &nbsp </span> Work
+                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col-4">
+                    <span>1800 &nbsp </span> CS50
+                </div>
+                <div class="col-4">
+                    <span>1900 &nbsp </span> CS50
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-4">
+                    <span>2100 &nbsp </span> Sleep
+                </div>
+                <div class="col-4">
+                    <span id="emoji"> 2200 &nbsp &nbsp Repeat The For Loop &nbsp </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script>
+const emoji = document.querySelector("#emoji");
+setInterval(function(){
+    emoji.style.display = (emoji.style.display == 'none' ? '' : 'none');
+    
+},1000);
+
+  
+</script>
+</body>
+
+</html>

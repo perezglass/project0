@@ -1,0 +1,83 @@
+@charset "UTF-8";
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background-color: #b4b4b4;
+}
+
+.container {
+  margin-top: 35px;
+}
+
+.row div {
+  padding: 20px;
+  background-color: #52b6b6;
+  border: 2px solid #000000;
+}
+
+span {
+  color: #fff;
+}
+
+#emoji {
+  color: #021464;
+}
+
+#emoji::after {
+  content: "😀😆😂";
+}
+
+.main-nav {
+  width: 100%;
+  background: #000000;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+}
+
+.nav .name {
+  display: none;
+}
+
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+
+.nav a {
+  transition: all 0.5s;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 720px) {
+  .nav {
+    max-width: 1200px;
+  }
+
+  .nav .name {
+    display: block;
+    margin-right: auto;
+    color: #fff;
+  }
+
+  main {
+    padding-top: 180px;
+  }
+}
+@media screen and (max-width: 700px) {
+  main {
+    padding-top: 180px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

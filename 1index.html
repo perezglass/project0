@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style/styles.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<title>Otec Perez</title>
+</head>
+
+<link rel="stylesheet" href="style/styles.cs">
+<style>
+.alert {
+    margin-top: 50px;
+ }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+
+.profile {
+    margin-left: 20%; 
+    margin-top: 80px;
+    border-radius: 30px;
+
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari 3-8 */
+    transform: rotate(20deg);
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 10px solid #ccc;
+    border-radius: 15px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border: 3px solid lightgreen;
+    cursor: pointer;
+    border-radius:15px; 
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <div class="main-nav">
+        <ul class="nav">
+          <li class="name">Otec Perez </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="2index.html">Photos</a></li>
+          <li><a href="sass/index.html">Schedule</a></li>
+        </ul>
+    </div>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Let us know your concerns:</p>
+  </div>
+<!-- The alert with bootstrap-->
+<div class="alert alert-primary" role="alert">
+    The information was sent. See YA!
+</div>
+<!-- My Profiel Pictures-->
+  <div class="row">
+    <div class="column">
+      <img src="images/me.jpeg" style="width:40%"  class="profile">
+    </div>
+
+<!-- The Form-->
+    <div class="column">
+      <form action="#" id = "form">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." autocomplete="off">
+        <label for="Eadd">Email Adress</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your Email Address." autocomplete="off">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Dominican Republic</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit" id = "stop">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+// to stop the form to be submitted 
+const alert = document.querySelector(".alert");
+const formButton = document.querySelector('#stop');
+const myForm = document.querySelector("#form");
+
+alert.style.display = "none";
+
+formButton.addEventListener('click', function(event){
+    event.preventDefault();
+    alert.style.display = "block";
+    setTimeout(function(){
+        alert.style.display = "none";
+       }, 4000);
+        myForm.reset();
+}); // end of the event listener
+
+</script>
+</body>
+</html>

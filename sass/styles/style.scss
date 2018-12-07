@@ -1,0 +1,95 @@
+
+ $color:#b4b4b4;
+ $textColor:#52b6b6;
+ $whiteColor:#fff;
+ $blackColor:#000000;
+ $emojiColor:#021464;
+
+ // Inheritance 
+ %message {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+    background-color:$color;
+}
+
+
+.container{
+    margin-top: 35px;
+}
+// Nesting
+.row {
+  
+  div {
+    padding: 20px;
+    background-color:$textColor;
+    border: 2px solid $blackColor;
+  }
+}
+
+span{
+    color:$whiteColor;
+}
+#emoji{
+    color: $emojiColor;
+}
+#emoji::after{
+    content:"\1F600 \1F606 \1F602 ";
+}
+.main-nav {
+   
+    width: 100%;
+    background: $blackColor;
+    min-height: 30px;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+  }
+
+
+  .nav {
+    @extend %message;
+  }
+  .nav .name {
+    display: none;
+  }
+  .nav li {
+    padding: 5px 10px 10px 10px;
+  }
+  .nav a {
+    transition: all .5s;
+  }
+  .nav a:hover {
+    color: $whiteColor;
+  }
+
+  @media screen and (min-width: 720px) {
+
+   .nav {
+      max-width: 1200px;
+    }
+  
+    .nav .name {
+      display: block;
+      margin-right: auto;
+      color: $whiteColor;
+    }
+  
+    main {
+      padding-top: 180px;
+    }
+  
+ 
+  }
+  @media screen and (max-width: 700px) {
+
+    main {
+      padding-top: 180px;
+    }
+  }
